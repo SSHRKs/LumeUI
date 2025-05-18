@@ -1,6 +1,6 @@
 ## Creating Button
 ```luau
-Tab:Button({
+local Button = Tab:Button({
     Title = "Button Example",
     Callback = function()
         print('Click!')
@@ -9,5 +9,6 @@ end})
 
 | Tag         | Type        | Default  |
 | ----------- | ----------- |----------|
-| Title       | String      | "Button" |
+| Title       | String      | Button   |
+| Icon        | String      | nil      |
 | Callback    | function    | nil      |
