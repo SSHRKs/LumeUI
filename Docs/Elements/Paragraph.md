@@ -9,6 +9,7 @@ Tab:Paragraph({
 
 | Tag         | Type        | Default    |
 | ----------- | ----------- |------------|
-| Title       | String      | "Paragraph"|
-| Color       | String      | "Default"  |
+| Title       | String      | Paragraph  |
+| Icon        | String      | nil        |
+| Color       | String      | Default    |
 | Brightness  | Number      | 28         |
