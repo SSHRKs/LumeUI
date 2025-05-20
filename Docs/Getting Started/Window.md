@@ -14,7 +14,8 @@ local Window = UI:UI({
 ```
 
 <divier>
-## Option
+
+    ## Option
 | Tag          | Type        | Default     |
 | -------------| ----------- |-------------|
 | Name         | String      | UI Library  |
