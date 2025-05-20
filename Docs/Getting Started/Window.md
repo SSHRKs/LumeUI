@@ -6,8 +6,20 @@ local Window = UI:UI({
     Transparent = false,
     Elements = {
       Minimized = true,
-      Maximized = true,
       Close = true
     },
 })
 ```
+
+## Option
+| Tag         | Type        | Default     |
+| ----------- | ----------- |-------------|
+| Name        | String      | UI Library  |
+| Size        | UDim2       | 420, 280    |
+| Callback    | function    | nil         |
+
+## Elements Option
+| Tag         | Type        | Default     |
+| ----------- | ----------- |-------------|
+| Minimized   | String      | true        |
+| Close       | UDim2       | true        |
