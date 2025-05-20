@@ -1,6 +1,6 @@
 local SlimeUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/SSHRKs/SlimUI/refs/heads/main/main.lua"))()
 
-local Window = SlimeUI:CreateWindow({
+local Window = SlimeUI:UI({
     Name = "Example UI",
     Size = UDim2.fromOffset(290, 240)
 })
