@@ -13,7 +13,7 @@ local Window = UI:UI({
 })
 ```
 
-<divier>
+divier
 
     ## Option
 | Tag          | Type        | Default     |
