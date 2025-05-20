@@ -22,5 +22,5 @@ local Window = UI:UI({
 ## Elements Option
 | Tag         | Type        | Default     |
 | ----------- | ----------- |-------------|
-| Minimized   | String      | true        |
-| Close       | UDim2       | true        |
+| Minimized   | Bool        | true        |
+| Close       | Bool        | true        |
