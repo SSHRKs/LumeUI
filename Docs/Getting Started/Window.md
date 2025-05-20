@@ -12,11 +12,12 @@ local Window = UI:UI({
 ```
 
 ## Option
-| Tag         | Type        | Default     |
-| ----------- | ----------- |-------------|
-| Name        | String      | UI Library  |
-| Size        | UDim2       | 420, 280    |
-| Callback    | function    | nil         |
+| Tag          | Type        | Default     |
+| -------------| ----------- |-------------|
+| Name         | String      | UI Library  |
+| Transparent  | UDim2       | false       |
+| Size         | UDim2       | 420, 280    |
+| SideBarWidth | function    | 134         |
 
 ## Elements Option
 | Tag         | Type        | Default     |
