@@ -2,13 +2,15 @@ local SlimeUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/SSHRK
 
 local Window = SlimeUI:CreateWindow({
     Name = "Example UI",
-    Size = UDim2.fromOffset(290, 240)
+    Icon = "hexagon",
+    SideBarWidth = 136,
+    Size = UDim2.fromOffset(460, 290)
 })
 
-local ParagraphTab = Window:Tab({Title = "Display Elements", Icon = "type"})
+local ParagraphTab = Window:Tab({Title = "Display Elements", Icon = "picture-in-picture"})
 local ManagementTab = Window:Tab({Title = "Management", Icon = "chart-no-axes-gantt"})
 local InputTab = Window:Tab({Title = "Input Elements", Icon = "file-input"})
-UI:Devider()
+SlimeUI:Devider()
 local SettingsTab = Window:Tab({Title = "Settings", Icon = "cog"})
 local Colors = {"Default","Red","Orange","Yellow","Green","Ocyan","Blue","Purple", "Pink"}
 
@@ -74,11 +76,11 @@ ManagementTab:Button({
         print('Click!')
 end})
 
-ManagementTab:Button({
+local Button = ManagementTab:Button({
     Title = "Destroy Button",
     Icon = "trash-2",
     Callback = function()
-        print('Click!')
+        Button:Close()
 end})
 
 ManagementTab:SmallElement({
@@ -106,6 +108,23 @@ ManagementTab:SmallElement({
             end,
         },
     }
+})
+
+ManagementTab:SmallElement({
+    Button = {
+        {
+            Title = "Click",
+            Callback = function()
+                print('Click!')
+            end,
+        },
+        {
+            Title = "Button",
+            Callback = function()
+                print('Click!')
+            end,
+        },
+    },
 })
 
 ManagementTab:Section({Title = "Toggle Element"})
@@ -143,8 +162,8 @@ ManagementTab:Slider({
 		Max = 220,
 		Default = 50,
 	},
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	Callback = function(value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 	end
 })
 ManagementTab:Slider({
@@ -155,23 +174,59 @@ ManagementTab:Slider({
 		Max = 120,
 		Default = 70,
 	},
-	Callback = function(Value)
-		game:GetService'Workspace'.Camera.FieldOfView = Value
+	Callback = function(value)
+		game:GetService'Workspace'.Camera.FieldOfView = value
 	end
 })
 
 ManagementTab:Section({Title = "DropDown"})
-ManagementTab:Section({Title = "Keybind"})
+local DropDown = ManagementTab:DropDown({
+    Title = "DropDown Example",
+    Value = "Option A",
+    Option = {'Option A', 'Option B', 'Option C'},
+    Callback = function(option)
+        print(option)
+    end
+})
 
+
+ManagementTab:Section({Title = "Keybind"})
 ManagementTab:Keybind({
     Title = "Keybind Element",
-    Callback = function(Value)
-        print(Value)
+    Callback = function(key)
+        print(key)
 end})
-
 InputTab:Section({Title = "Input"})
 InputTab:Input({
     Title = "Input Element",
-    Callback = function(Value)
-        print(Value)
+    Callback = function(input)
+        print(input)
+end})
+
+InputTab:Input({
+    Title = "Input Element",
+    Value = "Input",
+    Callback = function(input)
+        print(input)
+end})
+
+SettingsTab:Section({Title = "Window", Icon = "grid-2x2"})
+SettingsTab:Toggle({
+    Title = "Transparency",
+    Default = true,
+    Callback = function(state)
+        SlimeUI:SetTransparency(state)
+end})
+
+SettingsTab:Section({Title = "Misc"})
+SettingsTab:Keybind({
+    Title = "Toggle Key Window",
+    Callback = function(key)
+        UI:SetToggleKey(key)
+end})
+SettingsTab:Button({
+    Title = "Destroy Window",
+    Icon = "trash-2",
+    Callback = function()
+        SlimeUI:Close()
 end})
