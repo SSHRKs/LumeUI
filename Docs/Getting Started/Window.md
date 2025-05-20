@@ -13,6 +13,7 @@ local Window = UI:UI({
 })
 ```
 
+<divier>
 ## Option
 | Tag          | Type        | Default     |
 | -------------| ----------- |-------------|
