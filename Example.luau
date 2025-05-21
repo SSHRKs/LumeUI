@@ -2815,7 +2815,7 @@ function UI:CreateWindow(Config)
     return TabModule, Window, UI
 end
 
-local Window = UI:CreateWindow({
+local Window = SlimUI:CreateWindow({
     Name = "Example UI",
     Icon = "hexagon",
     SideBarWidth = 136,
@@ -3004,13 +3004,6 @@ local DropDown = ManagementTab:DropDown({
     end
 })
 
-ManagementTab:Button({
-    Title = "Refresh DropDown",
-    Callback = function()
-        DropDown:Refresh({"Option D","Option E","Option F",})
-end})
-
-
 ManagementTab:Section({Title = "Keybind"})
 ManagementTab:Keybind({
     Title = "Keybind Element",
@@ -3036,18 +3029,18 @@ SettingsTab:Toggle({
     Title = "Transparency",
     Default = true,
     Callback = function(state)
-        UI:SetTransparency(state)
+        SlimUI:SetTransparency(state)
 end})
 
 SettingsTab:Section({Title = "Misc"})
 SettingsTab:Keybind({
     Title = "Toggle Key Window",
     Callback = function(key)
-        UI:SetToggleKey(key)
+        SlimUI:SetToggleKey(key)
 end})
 SettingsTab:Button({
     Title = "Destroy Window",
     Icon = "trash-2",
     Callback = function()
-        UI:Close()
+        SlimUI:Close()
 end})
