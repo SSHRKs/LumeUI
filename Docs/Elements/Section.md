@@ -7,3 +7,13 @@ local Section = Tab:Section({Title = "Toggle Element",})
 | ----------- | ----------- |---------|
 | Title       | String      | Section |
 | Icon        | String      | nil     |
+
+## Set Title
+```lua
+Section:SetTitle('New Title')
+```
+
+## Destroy Element
+```lua
+Section:Close()
+```
