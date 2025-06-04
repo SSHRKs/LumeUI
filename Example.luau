@@ -1,4 +1,6 @@
-local Window = UI:CreateWindow({
+local SlimUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/SSHRKs/SlimUI/refs/heads/main/main.lua"))()
+
+local Window = SlimUI:CreateWindow({
     Name = "Example UI",
     Icon = "hexagon",
     SideBarWidth = 136,
@@ -305,19 +307,19 @@ SettingsTab:Toggle({
     Title = "Transparency",
     Default = true,
     Callback = function(state)
-        UI:SetTransparency(state)
+        SlimUI:SetTransparency(state)
 end})
 
 SettingsTab:Section({Title = "Misc"})
 SettingsTab:Keybind({
     Title = "Toggle Key Window",
     Callback = function(key)
-        UI:SetToggleKey(key)
+        SlimUI:SetToggleKey(key)
 end})
 
 SettingsTab:Button({
     Title = "Destroy Window",
     Icon = "trash-2",
     Callback = function()
-        UI:Close()
+        SlimUI:Close()
 end})
