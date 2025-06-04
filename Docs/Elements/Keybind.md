@@ -2,8 +2,8 @@
 ```luau
 local Keybind = Tab:Keybind({
     Title = "Keybind Element",
-    Callback = function(Key)
-        print(Key)
+    Callback = function(key)
+        print(key)
     end
 })
 ```
