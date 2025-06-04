@@ -18,3 +18,11 @@ local Paragraph = Tab:Paragraph({
 ```lua
 Paragraph:SetTitle('New Title')
 ```
+## Set Desc
+```lua
+Paragraph:SetDesc('New Desc')
+```
+## Destroy Element
+```lua
+Paragraph:SetTitle('New Title')
+```
