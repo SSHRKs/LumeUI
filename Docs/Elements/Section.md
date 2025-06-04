@@ -12,7 +12,6 @@ local Section = Tab:Section({Title = "Toggle Element",})
 ```lua
 Section:SetTitle('New Title')
 ```
-
 ## Destroy Element
 ```lua
 Section:Close()
