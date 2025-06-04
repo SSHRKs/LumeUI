@@ -17,3 +17,8 @@ end})
 ```lua
 Button:SetTitle('New Title')
 ```
+
+## Destroy Element
+```lua
+Button:Close()
+```
