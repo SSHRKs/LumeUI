@@ -24,5 +24,5 @@ Paragraph:SetDesc('New Desc')
 ```
 ## Destroy Element
 ```lua
-Paragraph:SetTitle('New Title')
+Paragraph:Close()
 ```
