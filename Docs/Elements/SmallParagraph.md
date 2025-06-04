@@ -1,6 +1,6 @@
 ## Creating Paragraph
 ```luau
-Tab:SmallParagraph({
+local SmallParagraph = Tab:SmallParagraph({
     Title = "Paragraph Example",
     Color = "Default",
     Brightness = 28,
