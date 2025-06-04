@@ -13,3 +13,8 @@ local Paragraph = Tab:Paragraph({
 | Icon        | String      | nil        |
 | Color       | String      | Default    |
 | Brightness  | Number      | 28         |
+
+## Set Title
+```lua
+Paragraph:SetTitle('New Title')
+```
