@@ -13,3 +13,16 @@ local Input = Tab:Input({
 | ----------- | ----------- |------------|
 | Title       | String      | Input      |
 | Callback    | function    | nil        |
+
+## Set Title
+```lua
+Input:SetTitle('New Title')
+```
+## Set Input Value
+```lua
+Input:SetValue('New Value')
+```
+## Destroy Element
+```lua
+Input:Close()
+```
