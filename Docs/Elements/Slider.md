@@ -9,7 +9,7 @@ local Slider = Tab:Slider({
 		Default = 50,
 	},
 	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+		game:GetService'Workspace'.Camera.FieldOfView = Value
 	end
 })
 ```
