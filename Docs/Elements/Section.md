@@ -1,6 +1,6 @@
 ## Creating Section
 ```luau
-Tab:Section({Title = "Toggle Element",})
+local Section = Tab:Section({Title = "Toggle Element",})
 ```
 
 | Tag         | Type        | Default |
