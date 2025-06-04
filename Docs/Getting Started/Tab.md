@@ -1,4 +1,4 @@
-## Creating a Window
+## Creating Tab
 ```luau
 local Tab = Window:Tab({
   Title = "Display Elements",
@@ -11,3 +11,8 @@ local Tab = Window:Tab({
 | ----------- | ----------- |-------------|
 | Title       | String      | Tab         |
 | Icon        | String      | nil         |
+
+## Creating Divider
+```luau
+SlimUI:Devider()
+```
