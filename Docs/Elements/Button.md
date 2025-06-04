@@ -12,3 +12,8 @@ end})
 | Title       | String      | Button   |
 | Icon        | String      | nil      |
 | Callback    | function    | nil      |
+
+## Set Title
+```lua
+Button:SetTitle('New Title')
+```
