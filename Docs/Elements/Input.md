@@ -2,8 +2,8 @@
 ```luau
 local Input = Tab:Input({
     Title = "Input Element",
-    Callback = function(Value)
-        print(Value)
+    Callback = function(input)
+        print(input)
     end
 })
 ```
