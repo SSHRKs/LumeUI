@@ -1,8 +1,12 @@
-local Window = SlimUI:CreateWindow({
+local Window = UI:CreateWindow({
     Name = "Example UI",
     Icon = "hexagon",
     SideBarWidth = 136,
-    Size = UDim2.fromOffset(460, 290)
+    Size = UDim2.fromOffset(460, 290),
+    Elements = {
+        Minimized = true,
+        Close = true
+    },
 })
 
 local ParagraphTab = Window:Tab({Title = "Display Elements", Icon = "picture-in-picture"})
@@ -15,6 +19,7 @@ local Colors = {"Default","Red","Orange","Yellow","Green","Ocyan","Blue","Purple
 ParagraphTab:Section({Title = "Paragraph", Icon = "a-large-small"})
 ParagraphTab:Paragraph({
     Title = "Paragraph Example",
+    Desc = "Description Paragraph"
 })
 
 ParagraphTab:Paragraph({
@@ -125,6 +130,18 @@ ManagementTab:SmallElement({
     },
 })
 
+ManagementTab:SmallElement({
+    Toggle = {
+        {
+            Title = "Toggle",
+            Default = false,
+            Callback = function(Value)
+                print(Value)
+            end,
+        },
+    },
+})
+
 ManagementTab:Section({Title = "Toggle Element"})
 ManagementTab:Toggle({
     Title = "Toggle Example",
@@ -132,15 +149,35 @@ ManagementTab:Toggle({
         print(Value)
 end})
 
-ManagementTab:Toggle({
+local Pisun = ManagementTab:Toggle({
     Title = "Active Toggle",
     Default = true,
     Callback = function(Value)
         print(Value)
 end})
 
+ManagementTab:SmallElement({
+    Button = {
+        {
+            Title = "Destroy Active Button",
+            Callback = function()
+                Pisun:Close()
+            end,
+        },
+    },
+    Toggle = {
+        {
+            Title = "Set Status",
+            Default = true,
+            Callback = function(Value)
+                Pisun:SetValue(Value)
+            end,
+        },
+    },
+})
+
 ManagementTab:Section({Title = "Slider"})
-ManagementTab:Slider({
+local Slider = ManagementTab:Slider({
 	Title = "Walk Speed",
 	Step = 1,
 	Value = {
@@ -164,6 +201,7 @@ ManagementTab:Slider({
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 	end
 })
+
 ManagementTab:Slider({
 	Title = "FOV",
 	Step = 1,
@@ -177,6 +215,29 @@ ManagementTab:Slider({
 	end
 })
 
+local ExampleSlider = ManagementTab:Slider({
+	Title = "Slider Example",
+	Step = 1,
+	Value = {
+		Min = 1,
+		Max = 120,
+		Default = 1,
+	},
+	Callback = function(value)
+	end
+})
+
+ManagementTab:SmallElement({
+    Button = {
+        {
+            Title = "Destroy Slider Example",
+            Callback = function()
+                ExampleSlider:Close()
+            end,
+        },
+    },
+})
+
 ManagementTab:Section({Title = "DropDown"})
 local DropDown = ManagementTab:DropDown({
     Title = "DropDown Example",
@@ -186,13 +247,34 @@ local DropDown = ManagementTab:DropDown({
         print(option)
     end
 })
+ManagementTab:SmallElement({
+    Button = {
+        {
+            Title = "Destroy DropDown Example",
+            Callback = function()
+                DropDown:Close()
+            end,
+        },
+    },
+})
 
 ManagementTab:Section({Title = "Keybind"})
-ManagementTab:Keybind({
+local Keybind = ManagementTab:Keybind({
     Title = "Keybind Element",
     Callback = function(key)
         print(key)
 end})
+ManagementTab:SmallElement({
+    Button = {
+        {
+            Title = "Destroy Keybind Element",
+            Callback = function()
+                Keybind:Close()
+            end,
+        },
+    },
+})
+
 InputTab:Section({Title = "Input"})
 InputTab:Input({
     Title = "Input Element",
@@ -200,30 +282,42 @@ InputTab:Input({
         print(input)
 end})
 
-InputTab:Input({
+local Input = InputTab:Input({
     Title = "Input Element",
     Value = "Input",
     Callback = function(input)
         print(input)
 end})
 
+InputTab:SmallElement({
+    Button = {
+        {
+            Title = "Destroy Input Element",
+            Callback = function()
+                Input:Close()
+            end,
+        },
+    },
+})
+
 SettingsTab:Section({Title = "Window", Icon = "grid-2x2"})
 SettingsTab:Toggle({
     Title = "Transparency",
     Default = true,
     Callback = function(state)
-        SlimUI:SetTransparency(state)
+        UI:SetTransparency(state)
 end})
 
 SettingsTab:Section({Title = "Misc"})
 SettingsTab:Keybind({
     Title = "Toggle Key Window",
     Callback = function(key)
-        SlimUI:SetToggleKey(key)
+        UI:SetToggleKey(key)
 end})
+
 SettingsTab:Button({
     Title = "Destroy Window",
     Icon = "trash-2",
     Callback = function()
-        SlimUI:Close()
+        UI:Close()
 end})
