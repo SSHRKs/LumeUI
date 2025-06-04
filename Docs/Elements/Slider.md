@@ -1,6 +1,6 @@
 ## Creating Slider
 ```luau
-Tab:Slider({
+local Slider = Tab:Slider({
 	Title = "Slider Example",
 	Step = 1,
 	Value = {
