@@ -1,6 +1,6 @@
 ## Creating Button
 ```luau
-Tab:Toggle({
+local Toggle = Tab:Toggle({
     Title = "Toggle Example",
     Default = false,
     Callback = function(State)
