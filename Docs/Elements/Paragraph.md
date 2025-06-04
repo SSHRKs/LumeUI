@@ -1,15 +1,15 @@
 ## Creating Paragraph
 ```luau
-Tab:Paragraph({
+local Paragraph = Tab:Paragraph({
     Title = "Paragraph Example",
-    Color = "Default",
-    Brightness = 28,
+    Desc = "Description Paragraph"
 })
 ```
 
 | Tag         | Type        | Default    |
 | ----------- | ----------- |------------|
 | Title       | String      | Paragraph  |
+| Desc        | String      | nil        |
 | Icon        | String      | nil        |
 | Color       | String      | Default    |
 | Brightness  | Number      | 28         |
