@@ -2,7 +2,7 @@
 
 ## Creating a Window
 ```luau
-local Window = SlimUI:UI({
+local Window = :UI({
     Name = "Example UI",
     Size = UDim2.fromOffset(420, 280),
     Transparent = false,
