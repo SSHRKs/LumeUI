@@ -11,8 +11,6 @@ local Paragraph = Tab:Paragraph({
 | Title       | String      | Paragraph  |
 | Desc        | String      | nil        |
 | Icon        | String      | nil        |
-| Color       | String      | Default    |
-| Brightness  | Number      | 28         |
 
 ## Set Title
 ```lua
