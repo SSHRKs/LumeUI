@@ -20,7 +20,6 @@ local Window = :UI({
 | Transparent   | UDim2       | false       |
 | Size          | UDim2       | 420, 280    |
 | SideBarWidth  | function    | 134         |
-| BackpackHotbar| Way         |game.CoreGui.RobloxGui.Backpack.Hotbar|
 
 ## Elements Option
 | Tag         | Type        | Default     |
