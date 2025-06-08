@@ -2,5 +2,5 @@
 
 ## Install 
 ```lua
--- Soon . . .
+LumeUI = loadstring(game:HttpGet(""))()
 ```
