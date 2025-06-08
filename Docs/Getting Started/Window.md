@@ -30,8 +30,10 @@ local Window = :UI({
 ## Creating Notification
 ```lua
 UI:Notification({
+    Title = "Title",
+    Desc = "Desc",
     Icon = "bird", --Lucide / rbxassetid
-    Delay = 3
+    Delay = 3,
 })
 ```
 
