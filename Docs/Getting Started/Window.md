@@ -26,3 +26,18 @@ local Window = :UI({
 | ----------- | ----------- |-------------|
 | Minimized   | Bool        | true        |
 | Close       | Bool        | true        |
+
+## Creating Notification
+```lua
+UI:Notification({
+    Icon = "bird",
+    Delay = 3
+})
+```
+
+| Tag         | Type        | Default     |
+| ----------- | ----------- |-------------|
+| Title       | String      | nil         |
+| Desc        | String      | nil         |
+| Icon        | String      | nil         |
+| Background  | String      | nil         |
