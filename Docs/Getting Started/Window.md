@@ -39,5 +39,5 @@ UI:Notification({
 | ----------- | ----------- |-------------|
 | Title       | String      | nil         |
 | Desc        | String      | nil         |
-| Icon        | String      | nil         | --Lucide / rbxassetid
-| Background  | String      | nil         | --rbxassetid Only 
+| Icon        | String      | nil         |
+| Background  | String      | nil         |
