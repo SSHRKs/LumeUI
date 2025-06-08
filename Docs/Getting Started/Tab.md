@@ -12,7 +12,7 @@ local Tab = Window:Tab({
 | Title       | String      | Tab         |
 | Icon        | String      | nil         |
 
-## Creating Divider
+## Creating Window
 ```luau
 SlimUI:Devider()
 ```
