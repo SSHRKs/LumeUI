@@ -14,12 +14,13 @@ local Window = :UI({
 ```
 
 ## Option
-| Tag          | Type        | Default     |
-| -------------| ----------- |-------------|
-| Name         | String      | UI Library  |
-| Transparent  | UDim2       | false       |
-| Size         | UDim2       | 420, 280    |
-| SideBarWidth | function    | 134         |
+| Tag           | Type        | Default     |
+| ------------- | ----------- |-------------|
+| Name          | String      | UI Library  |
+| Transparent   | UDim2       | false       |
+| Size          | UDim2       | 420, 280    |
+| SideBarWidth  | function    | 134         |
+| BackpackHotbar| Way         |game.CoreGui.RobloxGui.Backpack.Hotbar|
 
 ## Elements Option
 | Tag         | Type        | Default     |
