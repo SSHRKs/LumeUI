@@ -17,7 +17,14 @@ end})
 ```lua
 Button:SetTitle('New Title')
 ```
-
+## Set Desc
+```lua
+Button:SetDesc('New Desc')
+```
+## Set Icon
+```lua
+Button:SetIcon('bird')
+```
 ## Destroy Element
 ```lua
 Button:Close()
