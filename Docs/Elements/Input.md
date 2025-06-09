@@ -12,6 +12,7 @@ local Input = Tab:Input({
 | Tag         | Type        | Default    |
 | ----------- | ----------- |------------|
 | Title       | String      | Input      |
+| MaxSymbols  | Number     | nil         |
 | Callback    | function    | nil        |
 
 ## Set Title
@@ -21,6 +22,10 @@ Input:SetTitle('New Title')
 ## Set Input Value
 ```lua
 Input:SetValue('New Value')
+```
+## Set MaxSymbols
+```
+Input:SetMaxSymbols(999)
 ```
 ## Destroy Element
 ```lua
