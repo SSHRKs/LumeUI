@@ -43,3 +43,4 @@ UI:Notification({
 | Desc        | String      | nil         |
 | Icon        | String      | nil         |
 | Background  | String      | nil         |
+| Delay       | Number      | 3           |
