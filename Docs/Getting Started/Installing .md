@@ -1,6 +1,6 @@
 # ⚠️ - EXPERIMENTAL UI
 
-## Installing Latest Version (Recommended)
+## Installing Latest Version (**Recommended**)
 ```lua
 LumeUI = loadstring(game:HttpGet("https://github.com/SSHRKs/LumeUI/releases/latest/download/main.lua"))()
 ```
