@@ -24,7 +24,7 @@ Input:SetTitle('New Title')
 Input:SetValue('New Value')
 ```
 ## Set MaxSymbols
-```
+```lua
 Input:SetMaxSymbols(999)
 ```
 ## Destroy Element
