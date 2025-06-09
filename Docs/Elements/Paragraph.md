@@ -20,6 +20,14 @@ Paragraph:SetTitle('New Title')
 ```lua
 Paragraph:SetDesc('New Desc')
 ```
+## Set Icon
+```lua
+Paragraph:SetIcon('bird')
+```
+## Remove Icon
+```lua
+Paragraph:RemoveIcon()
+```
 ## Destroy Element
 ```lua
 Paragraph:Close()
