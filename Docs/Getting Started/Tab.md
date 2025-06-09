@@ -14,5 +14,5 @@ local Tab = Window:Tab({
 
 ## Creating Window
 ```luau
-SlimUI:Devider()
+Window:Devider()
 ```
