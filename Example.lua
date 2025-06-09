@@ -341,7 +341,7 @@ InputTab:SmallElement({
 NotificationTab:Button({
     Title = "Get Notification",
     Callback = function()
-        UI:Notification({
+        LumeUI:Notification({
             Delay = 3
         })
     end
@@ -350,7 +350,7 @@ NotificationTab:Button({
 NotificationTab:Button({
     Title = "Get Icon Notification",
     Callback = function()
-        UI:Notification({
+        LumeUI:Notification({
             Icon = "bird",
             Delay = 3
         })
@@ -360,7 +360,7 @@ NotificationTab:Button({
 NotificationTab:Button({
     Title = "Get Background Notification",
     Callback = function()
-        UI:Notification({
+        LumeUI:Notification({
             Icon = "bird",
             Background = "http://www.roblox.com/asset/?id=2878190399",
             Delay = 3
