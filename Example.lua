@@ -1,4 +1,5 @@
---[[
+local LumeUI = loadstring(game:HttpGet("https://github.com/SSHRKs/LumeUI/releases/latest/download/main.lua"))()
+
 function gradient(text, startColor, endColor)
     local result = ""
     local length = #text
@@ -15,7 +16,7 @@ function gradient(text, startColor, endColor)
     return result
 end
 
-local Window = UI:CreateWindow({
+local Window = LumeUI:CreateWindow({
     Name = "Example",
     Icon = "hexagon",
     SideBarWidth = 136,
@@ -373,28 +374,28 @@ SettingsTab:DropDown({
     Value = "--",
     Option = {'Dark', 'Light'},
     Callback = function(option)
-        UI:SetTheme(option)
+        LumeUI:SetTheme(option)
     end
 })
 SettingsTab:Toggle({
     Title = "Transparency",
     Default = true,
     Callback = function(state)
-        UI:SetTransparency(state)
+        LumeUI:SetTransparency(state)
 end})
 
 SettingsTab:Section({Title = "Misc"})
 SettingsTab:Keybind({
     Title = "Toggle Key Window",
     Callback = function(key)
-        UI:SetToggleKey(key)
+        LumeUI:SetToggleKey(key)
 end})
 
 SettingsTab:Button({
     Title = "Destroy Window",
     Icon = "trash-2",
     Callback = function()
-        UI:Close()
+        LumeUI:Close()
 end})
 
 local SelectedIcon = 'bird'
@@ -427,4 +428,4 @@ TrashIcon = OtherTab:Button({
     Icon = "trash-2",
     Callback = function()
         ParagraphIcon:RemoveIcon()
-end})--]]
+end})
