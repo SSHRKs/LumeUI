@@ -4,7 +4,7 @@
 ```luau
 local Window = LumeUI:UI({
     Name = "Example UI",
-    Size = UDim2.fromOffset(420, 280),
+    Size = UDim2.fromOffset(520, 320),
     Transparent = false,
     Elements = {
       Minimized = true,
