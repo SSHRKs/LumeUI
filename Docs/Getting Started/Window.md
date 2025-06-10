@@ -2,7 +2,7 @@
 
 ## Creating a Window
 ```luau
-local Window = LumeUI:UI({
+local Window = LumeUI:CreateWindow({
     Name = "Example UI",
     Size = UDim2.fromOffset(520, 320),
     Transparent = false,
