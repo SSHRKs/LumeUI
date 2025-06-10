@@ -1,6 +1,6 @@
 ## Installing Latest Version (**Recommended**)
 ```lua
-LumeUI = loadstring(game:HttpGet("https://github.com/SSHRKs/LumeUI/releases/latest/download/main.lua"))()
+local LumeUI = loadstring(game:HttpGet("https://github.com/SSHRKs/LumeUI/releases/latest/download/main.lua"))()
 ```
 ## Installing Selected Version
 ```lua
