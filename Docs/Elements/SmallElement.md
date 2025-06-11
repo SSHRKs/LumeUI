@@ -1,4 +1,4 @@
-## Creating Paragraph
+## Creating SmallElement
 ```luau
 Tab:SmallElement({
     Button = {
