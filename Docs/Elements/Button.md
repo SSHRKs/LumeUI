@@ -10,6 +10,7 @@ end})
 | Tag         | Type        | Default  |
 | ----------- | ----------- |----------|
 | Title       | String      | Button   |
+| Desc        | String      | nil      |
 | Icon        | String      | mouse-pointer-click      |
 | Callback    | function    | nil      |
 
