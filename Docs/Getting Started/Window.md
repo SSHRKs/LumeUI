@@ -1,5 +1,3 @@
-# ⚠️ - EXPERIMENTAL UI
-
 ## Creating a Window
 ```luau
 local Window = LumeUI:CreateWindow({
