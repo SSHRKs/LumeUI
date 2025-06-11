@@ -174,6 +174,7 @@ end})
 
 local Pisun = ManagementTab:Toggle({
     Title = "Active Toggle",
+    Desc = "Desc",
     Default = true,
     Callback = function(Value)
         print(Value)
@@ -284,6 +285,7 @@ ManagementTab:SmallElement({
 ManagementTab:Section({Title = "Keybind"})
 local Keybind = ManagementTab:Keybind({
     Title = "Keybind Element",
+    Desc = "Desc",
     Callback = function(key)
         print(key)
 end})
@@ -307,6 +309,7 @@ end})
 
 local Input = InputTab:Input({
     Title = "Input Limit",
+    Desc = "Desc",
     Value = "Input",
     MaxSymbols = 25,
     Callback = function(input)
