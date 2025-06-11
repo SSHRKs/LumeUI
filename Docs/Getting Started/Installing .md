@@ -4,7 +4,7 @@ local LumeUI = loadstring(game:HttpGet("https://github.com/SSHRKs/LumeUI/release
 ```
 ## Installing Selected Version
 ```lua
-local Version = "1.0.0"
+local Version = "1.0.1"
 LumeUI = loadstring(game:HttpGet("https://github.com/SSHRKs/LumeUI/releases/latest/download/".. Version .."/main.lua"))()
 ```
 
