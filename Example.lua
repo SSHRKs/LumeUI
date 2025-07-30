@@ -16,7 +16,7 @@ function gradient(text, startColor, endColor)
     return result
 end
 
-local Window = LumeUI:CreateWindow({
+local Window = UI:CreateWindow({
     Name = "Example",
     Icon = "hexagon",
     SideBarWidth = 136,
@@ -34,7 +34,35 @@ local NotificationTab = Window:Tab({Title = "Notification", Icon = "message-squa
 Window:Devider()
 local SettingsTab = Window:Tab({Title = "Settings", Icon = "cog"})
 Window:Devider()
+local LockedElementsTab = Window:Tab({Title = "Locked Elements", Icon = "square-dashed-mouse-pointer"})
 local OtherTab = Window:Tab({Title = "Other", Icon = "hash"})
+
+ParagraphTab:Section({Title = "Traffic", Icon = "chart-no-axes-combined"})
+local bebebe = ParagraphTab:Traffic({Title = "Traffic Title"})
+
+ParagraphTab:Slider({
+    Title = "Set Traffic",
+	Step = 1,
+	Value = {
+		Min = 1,
+		Max = 1000,
+		Default = 5,
+	},
+	Callback = function(value)
+        bebebe:SetValue(value)
+	end
+})
+
+ParagraphTab:SmallElement({
+    Button = {
+        {
+            Title = "Reset Traffic",
+            Callback = function()
+                bebebe:Reset()
+            end,
+        },
+    },
+})
 
 ParagraphTab:Section({Title = "Paragraph", Icon = "a-large-small"})
 ParagraphTab:Paragraph({
@@ -271,6 +299,16 @@ local DropDown = ManagementTab:DropDown({
         print(option)
     end
 })
+local DropDown = ManagementTab:DropDown({
+    Title = "DropDown Example",
+    Value = "Option A",
+    Multi = true,
+    Option = {'Option A', 'Option B', 'Option C'},
+    Callback = function(option)
+        print(option)
+    end
+})
+
 ManagementTab:SmallElement({
     Button = {
         {
@@ -285,7 +323,6 @@ ManagementTab:SmallElement({
 ManagementTab:Section({Title = "Keybind"})
 local Keybind = ManagementTab:Keybind({
     Title = "Keybind Element",
-    Desc = "Desc",
     Callback = function(key)
         print(key)
 end})
@@ -344,7 +381,7 @@ InputTab:SmallElement({
 NotificationTab:Button({
     Title = "Get Notification",
     Callback = function()
-        LumeUI:Notification({
+        UI:Notification({
             Delay = 3
         })
     end
@@ -353,7 +390,7 @@ NotificationTab:Button({
 NotificationTab:Button({
     Title = "Get Icon Notification",
     Callback = function()
-        LumeUI:Notification({
+        UI:Notification({
             Icon = "bird",
             Delay = 3
         })
@@ -363,7 +400,7 @@ NotificationTab:Button({
 NotificationTab:Button({
     Title = "Get Background Notification",
     Callback = function()
-        LumeUI:Notification({
+        UI:Notification({
             Icon = "bird",
             Background = "http://www.roblox.com/asset/?id=2878190399",
             Delay = 3
@@ -375,30 +412,30 @@ SettingsTab:Section({Title = "Window", Icon = "grid-2x2"})
 SettingsTab:DropDown({
     Title = "Theme",
     Value = "--",
-    Option = {'Dark', 'Light'},
+    Option = {'Dark', 'Light', 'Amethyst'},
     Callback = function(option)
-        LumeUI:SetTheme(option)
+        UI:SetTheme(option)
     end
 })
 SettingsTab:Toggle({
     Title = "Transparency",
     Default = true,
     Callback = function(state)
-        LumeUI:SetTransparency(state)
+        UI:SetTransparency(state)
 end})
 
 SettingsTab:Section({Title = "Misc"})
 SettingsTab:Keybind({
     Title = "Toggle Key Window",
     Callback = function(key)
-        LumeUI:SetToggleKey(key)
+        UI:SetToggleKey(key)
 end})
 
 SettingsTab:Button({
     Title = "Destroy Window",
     Icon = "trash-2",
     Callback = function()
-        LumeUI:Close()
+        UI:Close()
 end})
 
 local SelectedIcon = 'bird'
@@ -432,3 +469,79 @@ TrashIcon = OtherTab:Button({
     Callback = function()
         ParagraphIcon:RemoveIcon()
 end})
+
+OtherTab:Toggle({
+    Title = "Left Alignment",
+    Alignment = "Left",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+end})
+
+local LockedButton = LockedElementsTab:Button({
+    Title = "Button",
+    Locked = true,
+    Callback = function()
+end})
+
+local LockedToggle = LockedElementsTab:Toggle({
+    Title = "Toggle",
+    Locked = true,
+    Callback = function(value)
+end})
+
+local LockedSlider = LockedElementsTab:Slider({
+	Title = "Slider",
+    Locked = true,
+	Step = 1,
+	Value = {
+		Min = 5,
+		Max = 30,
+		Default = 5,
+	},
+	Callback = function(value)
+        Input:SetMaxSymbols(value)
+	end
+})
+
+local LockedDropdown = LockedElementsTab:DropDown({
+    Title = "Dropdown",
+    Locked = true,
+    Value = "le",
+    Option = {'le', 'lele', 'lelele'},
+    Callback = function(option)
+        SelectedIcon = option
+    end
+})
+
+local LockedInput = LockedElementsTab:Input({
+    Title = "Input",
+    Locked = true,
+    Value = "Input",
+    Callback = function(input)
+        print(input)
+end})
+
+LockedElementsTab:SmallElement({
+    Toggle = {
+        {
+            Title = "Lock / Unlock",
+            Default = true,
+            Callback = function(Value)
+                if Value then
+                    LockedButton:Lock()
+                    LockedToggle:Lock()
+                    LockedSlider:Lock()
+                    LockedDropdown:Lock()
+                    LockedInput:Lock()
+                else
+                    LockedButton:UnLock()
+                    LockedToggle:UnLock()
+                    LockedSlider:UnLock()
+                    LockedDropdown:UnLock()
+                    LockedInput:UnLock()
+                end
+            end,
+        },
+    },
+})
