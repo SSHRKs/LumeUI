@@ -9,6 +9,10 @@ local Traffic = Tab:Traffic({
 | ----------- | ----------- |----------|
 | Title       | String      | nil      |
 
+## Set Title
+```luau
+Traffic:SetTitle('New Title')
+```
 ## Set Value
 ```luau
 Traffic:SetValue(0)
