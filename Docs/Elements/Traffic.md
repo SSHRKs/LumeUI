@@ -8,3 +8,12 @@ local Traffic = Tab:Traffic({
 | Tag         | Type        | Default  |
 | ----------- | ----------- |----------|
 | Title       | String      | nil      |
+
+## Set Value
+```luau
+Traffic:SetValue(0)
+```
+## Reset Traffic
+```luau
+Traffic:Reset()
+```
