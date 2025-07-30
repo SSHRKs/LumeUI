@@ -16,7 +16,7 @@ function gradient(text, startColor, endColor)
     return result
 end
 
-local Window = UI:CreateWindow({
+local Window = LumeUI:CreateWindow({
     Name = "Example",
     Icon = "hexagon",
     SideBarWidth = 136,
@@ -381,7 +381,7 @@ InputTab:SmallElement({
 NotificationTab:Button({
     Title = "Get Notification",
     Callback = function()
-        UI:Notification({
+        LumeUI:Notification({
             Delay = 3
         })
     end
@@ -390,7 +390,7 @@ NotificationTab:Button({
 NotificationTab:Button({
     Title = "Get Icon Notification",
     Callback = function()
-        UI:Notification({
+        LumeUI:Notification({
             Icon = "bird",
             Delay = 3
         })
@@ -400,7 +400,7 @@ NotificationTab:Button({
 NotificationTab:Button({
     Title = "Get Background Notification",
     Callback = function()
-        UI:Notification({
+        LumeUI:Notification({
             Icon = "bird",
             Background = "http://www.roblox.com/asset/?id=2878190399",
             Delay = 3
@@ -414,28 +414,28 @@ SettingsTab:DropDown({
     Value = "--",
     Option = {'Dark', 'Light', 'Amethyst'},
     Callback = function(option)
-        UI:SetTheme(option)
+        LumeUI:SetTheme(option)
     end
 })
 SettingsTab:Toggle({
     Title = "Transparency",
     Default = true,
     Callback = function(state)
-        UI:SetTransparency(state)
+        LumeUI:SetTransparency(state)
 end})
 
 SettingsTab:Section({Title = "Misc"})
 SettingsTab:Keybind({
     Title = "Toggle Key Window",
     Callback = function(key)
-        UI:SetToggleKey(key)
+        LumeUI:SetToggleKey(key)
 end})
 
 SettingsTab:Button({
     Title = "Destroy Window",
     Icon = "trash-2",
     Callback = function()
-        UI:Close()
+        LumeUI:Close()
 end})
 
 local SelectedIcon = 'bird'
