@@ -13,5 +13,6 @@ end})
 | ----------- | ----------- |----------|
 | Title       | String      | Toggle   |
 | Alignment   | String      | Right    |
+| Locked      | Bool        | false    |
 | Default     | bool        | false    |
 | Callback    | function    | nil      |
