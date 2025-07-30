@@ -299,15 +299,6 @@ local DropDown = ManagementTab:DropDown({
         print(option)
     end
 })
-local DropDown = ManagementTab:DropDown({
-    Title = "DropDown Example",
-    Value = "Option A",
-    Multi = true,
-    Option = {'Option A', 'Option B', 'Option C'},
-    Callback = function(option)
-        print(option)
-    end
-})
 
 ManagementTab:SmallElement({
     Button = {
