@@ -18,24 +18,3 @@ local Dropdown = Tab:DropDown({
 | Value       | String      | nil        |
 | Option      | Table       | {}         |
 | Callback    | function    | nil        |
-
-## Set Title
-```lua
-Paragraph:SetTitle('New Title')
-```
-## Set Desc
-```lua
-Paragraph:SetDesc('New Desc')
-```
-## Set Icon
-```lua
-Paragraph:SetIcon('bird')
-```
-## Remove Icon
-```lua
-Paragraph:RemoveIcon()
-```
-## Destroy Element
-```lua
-Paragraph:Close()
-```
