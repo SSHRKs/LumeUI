@@ -12,6 +12,7 @@ local Input = Tab:Input({
 | Tag         | Type        | Default    |
 | ----------- | ----------- |------------|
 | Title       | String      | Input      |
+| Locked      | Bool        | false    |
 | MaxSymbols  | Number     | nil         |
 | Callback    | function    | nil        |
 
