@@ -18,6 +18,7 @@ local Slider = Tab:Slider({
 | Tag         | Type        | Default    |
 | ----------- | ----------- |------------|
 | Title       | String      | Slider     |
+| Locked      | Bool        | false    |
 | Step        | Number      | 1          |
 | Callback    | function    | nil        |
 
