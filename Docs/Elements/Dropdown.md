@@ -18,3 +18,8 @@ local Dropdown = Tab:DropDown({
 | Value       | String      | nil        |
 | Option      | Table       | {}         |
 | Callback    | function    | nil        |
+
+## Destroy Dropdown
+```luau
+Dropdown:Close()
+```
