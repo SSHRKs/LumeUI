@@ -19,6 +19,14 @@ local Dropdown = Tab:DropDown({
 | Option      | Table       | {}         |
 | Callback    | function    | nil        |
 
+## Set Title
+```lua
+Dropdown:SetTitle('New Title')
+```
+## Refresh Option
+```lua
+Dropdown:Refresh({'1', '2', '3'})
+```
 ## Destroy Element
 ```luau
 Dropdown:Close()
