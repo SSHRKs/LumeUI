@@ -20,3 +20,5 @@ Tab:SmallElement({
     }
 })
 ```
+
+![SmallElement](https://github.com/SSHRKs/LumeUI/blob/main/Images/SmallElements.png)
