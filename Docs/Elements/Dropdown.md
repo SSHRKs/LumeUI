@@ -19,7 +19,7 @@ local Dropdown = Tab:DropDown({
 | Option      | Table       | {}         |
 | Callback    | function    | nil        |
 
-## Destroy Dropdown
+## Destroy Element
 ```luau
 Dropdown:Close()
 ```
