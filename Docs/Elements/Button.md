@@ -6,6 +6,7 @@ local Button = Tab:Button({
         print('Click!')
 end})
 ```
+![](Images/Button.png)
 
 | Tag         | Type        | Default  |
 | ----------- | ----------- |----------|
