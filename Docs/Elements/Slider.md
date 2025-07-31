@@ -13,6 +13,7 @@ local Slider = Tab:Slider({
 	end
 })
 ```
+![Slider](https://github.com/SSHRKs/LumeUI/blob/main/Images/Slider.png)
 
 ## Option
 | Tag         | Type        | Default    |
