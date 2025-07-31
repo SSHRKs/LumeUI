@@ -6,7 +6,7 @@ local Button = Tab:Button({
         print('Click!')
 end})
 ```
-![o](https://github.com/SSHRKs/LumeUI/blob/main/Images/Button.png)
+![Button](https://github.com/SSHRKs/LumeUI/blob/main/Images/Button.png)
 
 | Tag         | Type        | Default  |
 | ----------- | ----------- |----------|
