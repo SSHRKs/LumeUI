@@ -27,7 +27,7 @@ local Window = LumeUI:CreateWindow({
 
 ## Creating Notification
 ```lua
-UI:Notification({
+LumeUI:Notification({
     Title = "Title",
     Desc = "Desc",
     Icon = "bird", --Lucide / rbxassetid
