@@ -405,7 +405,7 @@ SettingsTab:DropDown({
     Value = "--",
     Option = {'Dark', 'Light', 'Amethyst'},
     Callback = function(option)
-        LumeUI:SetTheme(option)
+        Window:SetTheme(option)
     end
 })
 SettingsTab:Toggle({
@@ -419,14 +419,14 @@ SettingsTab:Section({Title = "Misc"})
 SettingsTab:Keybind({
     Title = "Toggle Key Window",
     Callback = function(key)
-        LumeUI:SetToggleKey(key)
+        Window:SetToggleKey(key)
 end})
 
 SettingsTab:Button({
     Title = "Destroy Window",
     Icon = "trash-2",
     Callback = function()
-        LumeUI:Close()
+        Window:Close()
 end})
 
 local SelectedIcon = 'bird'
