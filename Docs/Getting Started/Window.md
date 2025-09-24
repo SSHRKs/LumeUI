@@ -42,3 +42,18 @@ LumeUI:Notification({
 | Icon        | String      | nil         |
 | Background  | String      | nil         |
 | Delay       | Number      | 3           |
+
+## Setting Library
+## Set Theme
+```lua
+Window:SetTheme('Dark') --Dark, Light
+```
+## Set Transparency
+```lua
+Window:SetTransparency(false) --true / false
+```
+## Set ToggleKey
+```lua
+Window:SetToggleKey(Enum.KeyCode.F)
+```
+
