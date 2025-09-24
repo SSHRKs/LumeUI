@@ -7,17 +7,3 @@ local LumeUI = loadstring(game:HttpGet("https://github.com/SSHRKs/LumeUI/release
 local Version = "1.0.1"
 LumeUI = loadstring(game:HttpGet("https://github.com/SSHRKs/LumeUI/releases/latest/download/".. Version .."/main.lua"))()
 ```
-
-## Setting Library
-## Set Theme
-```lua
-LumeUI:SetTheme('Dark') --Dark, Light
-```
-## Set Transparency
-```lua
-LumeUI:SetTransparency(false) --true / false
-```
-## Set ToggleKey
-```lua
-LumeUI:SetToggleKey(Enum.KeyCode.F)
-```
