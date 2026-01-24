@@ -1,5 +1,4 @@
-local Version = "1.0.6"
-LumeUI = loadstring(game:HttpGet("https://github.com/SSHRKs/LumeUI/releases/latest/download/".. Version .."/main.lua"))()
+local LumeUI = loadstring(game:HttpGet("https://github.com/SSHRKs/LumeUI/releases/latest/download/main.lua"))()
 
 function gradient(text, startColor, endColor)
     local result = ""
