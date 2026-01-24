@@ -27,6 +27,12 @@ local Window = LumeUI:CreateWindow({
     },
 })
 
+Window:EditOpenButton({
+	Title = "Title",
+	Icon = "hexagon",
+	CornerRadius = UDim.new(0,16)
+})
+
 local ParagraphTab = Window:Tab({Title = "Display Elements", Icon = "picture-in-picture"})
 local ManagementTab = Window:Tab({Title = "Management", Icon = "chart-no-axes-gantt"})
 local InputTab = Window:Tab({Title = "Input Elements", Icon = "file-input"})
