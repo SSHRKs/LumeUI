@@ -28,9 +28,9 @@ local Window = LumeUI:CreateWindow({
 })
 
 Window:EditOpenButton({
-	Title = "Title",
-	Icon = "hexagon",
-	CornerRadius = UDim.new(0,16)
+    Title = "Title",
+    Icon = "hexagon",
+    CornerRadius = UDim.new(0,16)
 })
 
 local ParagraphTab = Window:Tab({Title = "Display Elements", Icon = "picture-in-picture"})
