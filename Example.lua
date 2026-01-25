@@ -19,8 +19,9 @@ end
 local Window = LumeUI:CreateWindow({
     Name = "Example",
     Icon = "hexagon",
-    SideBarWidth = 136,
-    Size = UDim2.fromOffset(520, 320),
+    SideBarWidth = 139,
+    ToggleKey = Enum.KeyCode.F,
+    Size = UDim2.fromOffset(480, 320),
     Elements = {
         Minimized = true,
         Close = true
@@ -28,9 +29,18 @@ local Window = LumeUI:CreateWindow({
 })
 
 Window:EditOpenButton({
-    Title = "Title",
-    Icon = "hexagon",
-    CornerRadius = UDim.new(0,16)
+    Title = "Open",
+    Icon = "alarm-clock",
+    Transparency = 0.2,
+    StrokeThickness = 1,
+    Rotation = 0,
+    Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 255, 80)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 90, 255))
+    },
+    AutoRotation = true,
+    Speed = 15,
+    CornerRadius = UDim.new(0,16),
 })
 
 local ParagraphTab = Window:Tab({Title = "Display Elements", Icon = "picture-in-picture"})
@@ -58,6 +68,8 @@ ParagraphTab:Slider({
         bebebe:SetValue(value)
 	end
 })
+
+ParagraphTab:Traffic({Title = "Traffic Title", Value = 25})
 
 ParagraphTab:SmallElement({
     Button = {
@@ -378,7 +390,7 @@ InputTab:SmallElement({
 NotificationTab:Button({
     Title = "Get Notification",
     Callback = function()
-        LumeUI:Notification({
+        UI:Notification({
             Delay = 3
         })
     end
@@ -387,7 +399,7 @@ NotificationTab:Button({
 NotificationTab:Button({
     Title = "Get Icon Notification",
     Callback = function()
-        LumeUI:Notification({
+        UI:Notification({
             Icon = "bird",
             Delay = 3
         })
@@ -397,7 +409,7 @@ NotificationTab:Button({
 NotificationTab:Button({
     Title = "Get Background Notification",
     Callback = function()
-        LumeUI:Notification({
+        UI:Notification({
             Icon = "bird",
             Background = "http://www.roblox.com/asset/?id=2878190399",
             Delay = 3
@@ -409,23 +421,24 @@ SettingsTab:Section({Title = "Window", Icon = "grid-2x2"})
 SettingsTab:DropDown({
     Title = "Theme",
     Value = "--",
-    Option = {'Dark', 'Light', 'Amethyst'},
+    Option = {'Dark', 'Darked', 'Light', 'Amethyst', 'Emerald', 'Ocean', 'Midnight', 'Crimson', 'GreenApple', 'Lavender', 'Peach', 'Blueberry','Coffee'},
     Callback = function(option)
         Window:SetTheme(option)
     end
 })
+
 SettingsTab:Toggle({
     Title = "Transparency",
     Default = true,
     Callback = function(state)
-        LumeUI:SetTransparency(state)
+        Window:SetTransparency(state)
 end})
 
 SettingsTab:Section({Title = "Misc"})
 SettingsTab:Keybind({
     Title = "Toggle Key Window",
     Callback = function(key)
-        Window:SetToggleKey(key)
+        Window:SetToggleKey(Enum.KeyCode[key])
 end})
 
 SettingsTab:Button({
