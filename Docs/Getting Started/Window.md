@@ -43,6 +43,24 @@ LumeUI:Notification({
 | Background  | String      | nil         |
 | Delay       | Number      | 3           |
 
+## Edit `OpenButton`
+```lua
+Window:EditOpenButton({
+    Title = "Open",
+    Icon = "alarm-clock",
+    Transparency = 0.2,
+    StrokeThickness = 1,
+    Rotation = 0,
+    Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 255, 80)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 90, 255))
+    },
+    AutoRotation = true,
+    Speed = 15,
+    CornerRadius = UDim.new(0,16),
+})
+```
+
 ## Setting Library
 ## Set Theme
 ```lua
