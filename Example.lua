@@ -19,6 +19,7 @@ end
 local Window = LumeUI:CreateWindow({
     Name = "Example",
     Icon = "hexagon",
+	Author = "By .s.h.ark."
     SideBarWidth = 139,
     ToggleKey = Enum.KeyCode.F,
     Size = UDim2.fromOffset(480, 320),
