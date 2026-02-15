@@ -18,6 +18,7 @@ end
 
 local Window = LumeUI:CreateWindow({
     Name = "Example",
+	Author = "Hi"
     Icon = "hexagon",
     SideBarWidth = 139,
     ToggleKey = Enum.KeyCode.F,
