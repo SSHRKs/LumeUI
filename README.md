@@ -3,4 +3,4 @@
 ![UI](https://github.com/SSHRKs/LumeUI/blob/main/Images/UI.png)
 
 ## Credits
-- Footagesus ( [Icons] )(https://github.com/Footagesus/Icons)
+- Footagesus ( [Icons](https://github.com/Footagesus/Icons) )
